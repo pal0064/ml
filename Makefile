@@ -8,7 +8,6 @@ install-python-packages:
 	pip install gTTS boto3 scikit-optimize
 
 download-data-from-google-drive:
-	python -c "from google.colab import drive\ndrive.mount('/content/drive')"
 	!cp -r /content/drive/MyDrive/521\ ML\ \ final\ project/dataset/iam/compressed /
 	!rm -r /words
 	!mkdir -p /words
