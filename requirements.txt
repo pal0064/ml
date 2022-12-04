@@ -1,0 +1,6 @@
+pathlib2
+pip
+pre-commit
+setuptools
+wheel
+-e .
