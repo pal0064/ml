@@ -5,10 +5,10 @@ install-sys-packages:
 	sudo apt update && sudo apt install espeak ffmpeg libespeak1
 
 install-python-packages:
-	pip install gTTS boto3 scikit-optimize botocore matplotlib numpy opencv_python pandas plotly scikit_learn tabulate
+	pip install gTTS boto3 scikit-optimize botocore matplotlib numpy opencv_python pandas plotly scikit_learn tabulate easyocr
 
 install-python-packages-colab:
-	pip install gTTS boto3 scikit-optimize
+	pip install gTTS boto3 scikit-optimize easyocr
 
 download-data-from-google-drive:
 	cp -r /content/drive/MyDrive/521\ ML\ \ final\ project/dataset/iam/compressed /
