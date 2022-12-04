@@ -54,3 +54,14 @@ def recognize(model,label_encoder, image_path,image_size,normalize_scale,show_sa
   sound_file = convert_to_audio(predicted_labels,engine_type)
   show_predictions(predicted_labels,words,image_size,sample=show_sample)
   return sound_file, predicted_labels
+
+
+  # Get word count in both train and test
+
+def get_word_count(label_encoder,y_train,y_test):
+  words = []
+  for i in get_predictions(label_encoder,y_train):
+    words.append(i)
+  for i in get_predictions(label_encoder,y_test):
+    words.append(i)
+  return Counter(words)

@@ -4,7 +4,6 @@ import os
 import numpy as np
 from processing.image.image_processing import read_image,process_image
 from processing.image.handwriting.htr_image_processing import get_bounding_box_from_image
-
 # Extract word from line
 # INPUT: 'a01-000u-00-03 ok 154 919 757 166 78 VB stop\n'
 # OUTPUT: 'stop'
@@ -163,14 +162,3 @@ def get_words_from_image(image_path, IMAGE_SIZE, forms=False):
     word_image = process_image(cropped_img, IMAGE_SIZE)
     word_images.append(word_image)
   return word_images
-
-
-# Get word count in both train and test
-
-def get_word_count(label_encoder,y_train,y_test):
-  words = []
-  for i in get_predictions(label_encoder,y_train):
-    words.append(i)
-  for i in get_predictions(label_encoder,y_test):
-    words.append(i)
-  return Counter(words)
