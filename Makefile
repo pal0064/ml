@@ -1,10 +1,13 @@
 
-.PHONY: install-sys-packages install-python-packages download-data-from-google-drive
+.PHONY: install-sys-packages install-python-packages install-python-packages-colab download-data-from-google-drive
 
 install-sys-packages:
 	sudo apt update && sudo apt install espeak ffmpeg libespeak1
 
 install-python-packages:
+	pip install gTTS boto3 scikit-optimize botocore matplotlib numpy opencv_python pandas plotly scikit_learn tabulate
+
+install-python-packages-colab:
 	pip install gTTS boto3 scikit-optimize
 
 download-data-from-google-drive:
