@@ -2,8 +2,8 @@ import string
 from collections import defaultdict,Counter
 import os
 import numpy as np
-from pre_processing.image.image_pre_processing import read_image,process_image
-from pre_processing.image.handwriting.htr_image_processing import get_bounding_box_from_image
+from processing.image.image_processing import read_image,process_image
+from processing.image.handwriting.htr_image_processing import get_bounding_box_from_image
 
 # Extract word from line
 # INPUT: 'a01-000u-00-03 ok 154 919 757 166 78 VB stop\n'
