@@ -1,6 +1,13 @@
 pathlib2
-pip
 pre-commit
-setuptools
-wheel
--e .
+boto3
+botocore
+gTTS
+matplotlib
+numpy
+opencv_python
+pandas
+plotly
+scikit_learn
+tabulate
+scikit-optimize
