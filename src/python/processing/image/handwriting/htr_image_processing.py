@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from pre_processing.image.image_pre_processing import read_image,thresholding,show_image
+from processing.image.image_processing import read_image,thresholding,show_image
 
 # Detects bounding boxes for each word
 def get_bounding_box_from_image(file_name, forms=False):
