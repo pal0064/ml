@@ -22,11 +22,11 @@ def tune_svm_model(x_train,y_train,param_grid= {
             'gamma': Real(1e-6, 1e+1, prior='log-uniform'),
             'degree': Integer(1,8),
             'kernel': Categorical(['linear', 'poly', 'rbf','sigmoid']),
-        }, n_iter=10,cv = 3 ):
+        }, n_iter=5):
 
     model = svm.SVC()
     # tuning using bayesian optimization
-    final_model = tune_hyperparam_for_model(model,param_grid,n_iter,cv,x_train, y_train)
+    final_model = tune_hyperparam_for_model(model,param_grid,n_iter,x_train, y_train)
     return final_model
 
 
