@@ -5,13 +5,12 @@ from skopt.plots import plot_objective, plot_histogram
 
 
 
-def tune_hyperparam_for_model(model,param_grid,n_iter,cv,x_train,y_train,random_state=0):
+def tune_hyperparam_for_model(model,param_grid,n_iter,x_train,y_train,random_state=0):
   tuned_model = BayesSearchCV(
       model,
       param_grid,
       n_iter=n_iter,
-      random_state=random_state,
-      cv=cv
+      random_state=random_state
   )
   tuned_model.fit(x_train, y_train)
   return tuned_model
