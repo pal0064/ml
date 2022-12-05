@@ -16,5 +16,4 @@ def make_box_plots_for_models_performance_comparison(performance_df, metrics, ti
   return fig
 
 def show_fig(fig):
-    fig.show(renderer="colab")
-    fig.show() # to keep in local iypnb
+  fig.show(renderer="colab")
