@@ -14,3 +14,7 @@ def make_box_plots_for_models_performance_comparison(performance_df, metrics, ti
     )      
   fig.update_layout(height=800, width=1200, title_text="Models Performance {} Comparison".format(title_metric))
   return fig
+
+def show_fig(fig):
+    fig.show(renderer="colab")
+    fig.show() # to keep in local iypnb
