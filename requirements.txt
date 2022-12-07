@@ -12,3 +12,4 @@ scikit_learn
 tabulate
 scikit-optimize
 easyocr
+kaleido
